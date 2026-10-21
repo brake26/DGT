@@ -3,6 +3,8 @@
 #task 1 
 #Create a program that can caculate area and perimater
 
+
+
 def num_check (question):
 
     #ask for width
@@ -19,15 +21,30 @@ def num_check (question):
             print(error)
 
 #Main Routine
-for item in range (0,2):
+keep_going =""
+while keep_going =="":
+
     Width = num_check ("width:   ")
     print(Width)
 
-print()
+    print()
 
-for item in range (0,2):
     Height = num_check ("Height:   ")
     print(Height)
 
 
-     
+    area = Width * Height
+
+    perimator= 2 * (Width + Height)
+
+    print()
+    print(f"Perimator: {perimator} units")
+    print(f"area: {area} square units")
+
+    keep_going = ""
+
+
+    keep_going = input("press enter to keep going or any key to quit")
+    print()
+
+print("thank you for using the area/perimator calculator")
